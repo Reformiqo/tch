@@ -1,0 +1,133 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-04-24 20:38:45.245603",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "name1",
+  "unique_id",
+  "birthdate",
+  "mobile_number",
+  "do_you_have_heart_problem",
+  "do_you_have_high_blood_pressurehypertension",
+  "do_you_have_diabetes",
+  "do_you_have_any_joint_pain",
+  "if_yes_then_explain",
+  "describe",
+  "pain_experience_score",
+  "do_you_have_any_injury_in_past",
+  "do_you_have_asthma_or_any_lungs_diseases",
+  "any_other_physical_problem",
+  "attach",
+  "excercise_experience_score"
+ ],
+ "fields": [
+  {
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "label": "Name"
+  },
+  {
+   "fieldname": "unique_id",
+   "fieldtype": "Data",
+   "label": "Unique ID "
+  },
+  {
+   "fieldname": "birthdate",
+   "fieldtype": "Date",
+   "label": "Birthdate"
+  },
+  {
+   "fieldname": "mobile_number",
+   "fieldtype": "Data",
+   "label": "Mobile number"
+  },
+  {
+   "fieldname": "do_you_have_heart_problem",
+   "fieldtype": "Data",
+   "label": "Do you have Heart Problem?"
+  },
+  {
+   "fieldname": "do_you_have_high_blood_pressurehypertension",
+   "fieldtype": "Data",
+   "label": "Do you have High Blood Pressure/hypertension?"
+  },
+  {
+   "fieldname": "do_you_have_diabetes",
+   "fieldtype": "Data",
+   "label": "Do you have Diabetes?"
+  },
+  {
+   "fieldname": "do_you_have_any_joint_pain",
+   "fieldtype": "Select",
+   "label": "Do you have Any Joint Pain?",
+   "options": "Yes\nNo"
+  },
+  {
+   "fieldname": "if_yes_then_explain",
+   "fieldtype": "Select",
+   "label": "if Yes then explain",
+   "options": "Knee\nHip\nAnkle\nBack\nShoulder"
+  },
+  {
+   "fieldname": "describe",
+   "fieldtype": "Data",
+   "label": "Describe"
+  },
+  {
+   "fieldname": "do_you_have_any_injury_in_past",
+   "fieldtype": "Data",
+   "label": "Do you have any injury in past?"
+  },
+  {
+   "fieldname": "do_you_have_asthma_or_any_lungs_diseases",
+   "fieldtype": "Data",
+   "label": "Do you have asthma or any lungs diseases?"
+  },
+  {
+   "fieldname": "any_other_physical_problem",
+   "fieldtype": "Data",
+   "label": "Any other Physical Problem"
+  },
+  {
+   "fieldname": "attach",
+   "fieldtype": "Attach",
+   "label": "If you have any kind of physical problem, Please upload your Report otherwise send on Whats App no 9825344428"
+  },
+  {
+   "fieldname": "pain_experience_score",
+   "fieldtype": "Data",
+   "label": "Write down your score out of 10 for the pain you are experiencing"
+  },
+  {
+   "fieldname": "excercise_experience_score",
+   "fieldtype": "Data",
+   "label": "Write Down Your score out of 10 about exercise experiences in past"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-04-24 20:51:03.353270",
+ "modified_by": "Administrator",
+ "module": "Tch",
+ "name": "The Complete Health - PRQ Form",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
