@@ -1,14 +1,15 @@
 {
  "actions": [],
- "allow_rename": 1,
+ "autoname": "format: FRM-{###}",
  "creation": "2024-04-24 20:38:45.245603",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "mobile_number",
+  "customer",
   "name1",
   "unique_id",
   "birthdate",
-  "mobile_number",
   "do_you_have_heart_problem",
   "do_you_have_high_blood_pressurehypertension",
   "do_you_have_diabetes",
@@ -26,6 +27,7 @@
   {
    "fieldname": "name1",
    "fieldtype": "Data",
+   "hidden": 1,
    "label": "Name"
   },
   {
@@ -104,14 +106,20 @@
    "fieldname": "excercise_experience_score",
    "fieldtype": "Data",
    "label": "Write Down Your score out of 10 about exercise experiences in past"
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Select",
+   "label": "Customer"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-04-24 20:51:03.353270",
+ "modified": "2024-06-27 05:30:01.277088",
  "modified_by": "Administrator",
  "module": "Tch",
  "name": "The Complete Health - PRQ Form",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
@@ -127,6 +135,7 @@
    "write": 1
   }
  ],
+ "search_fields": "mobile_number",
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": []

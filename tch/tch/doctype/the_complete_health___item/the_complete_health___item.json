@@ -1,0 +1,118 @@
+{
+ "actions": [],
+ "autoname": "format: FRM-{###}",
+ "creation": "2024-05-17 01:20:55.839841",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "form",
+  "do_you_have_heart_problem",
+  "do_you_have_high_blood_pressurehypertension",
+  "do_you_have_diabetes",
+  "do_you_have_any_joint_pain",
+  "if_yes_then_explain",
+  "describe",
+  "pain_experience_score",
+  "do_you_have_any_injury_in_past",
+  "do_you_have_asthma_or_any_lungs_diseases",
+  "any_other_physical_problem",
+  "attach",
+  "excercise_experience_score"
+ ],
+ "fields": [
+  {
+   "fieldname": "do_you_have_heart_problem",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Do you have Heart Problem?"
+  },
+  {
+   "fieldname": "do_you_have_high_blood_pressurehypertension",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Do you have High Blood Pressure/hypertension?"
+  },
+  {
+   "fieldname": "do_you_have_diabetes",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Do you have Diabetes?"
+  },
+  {
+   "fieldname": "do_you_have_any_joint_pain",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Do you have Any Joint Pain?",
+   "options": "Yes\nNo"
+  },
+  {
+   "fieldname": "if_yes_then_explain",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "if Yes then explain",
+   "options": "Knee\nHip\nAnkle\nBack\nShoulder"
+  },
+  {
+   "fieldname": "describe",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Describe"
+  },
+  {
+   "fieldname": "pain_experience_score",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Write down your score out of 10 for the pain you are experiencing"
+  },
+  {
+   "fieldname": "do_you_have_any_injury_in_past",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Do you have any injury in past?"
+  },
+  {
+   "fieldname": "do_you_have_asthma_or_any_lungs_diseases",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Do you have asthma or any lungs diseases?"
+  },
+  {
+   "fieldname": "any_other_physical_problem",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Any other Physical Problem"
+  },
+  {
+   "fieldname": "attach",
+   "fieldtype": "Attach",
+   "in_list_view": 1,
+   "label": "If you have any kind of physical problem, Please upload your Report otherwise send on Whats App no 9825344428"
+  },
+  {
+   "fieldname": "excercise_experience_score",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Write Down Your score out of 10 about exercise experiences in past"
+  },
+  {
+   "fieldname": "form",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Form",
+   "options": "The Complete Health - PRQ Form"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-05-17 01:50:42.946441",
+ "modified_by": "Administrator",
+ "module": "Tch",
+ "name": "The Complete Health - Item",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

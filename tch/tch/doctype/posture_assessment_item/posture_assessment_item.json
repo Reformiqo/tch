@@ -1,0 +1,54 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format: FRM-{###}",
+ "creation": "2024-05-17 00:44:26.314058",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "form",
+  "image_1",
+  "image_2",
+  "image_3"
+ ],
+ "fields": [
+  {
+   "fieldname": "image_1",
+   "fieldtype": "Attach",
+   "in_list_view": 1,
+   "label": "Image 1"
+  },
+  {
+   "fieldname": "image_2",
+   "fieldtype": "Attach",
+   "in_list_view": 1,
+   "label": "Image 2"
+  },
+  {
+   "fieldname": "image_3",
+   "fieldtype": "Attach",
+   "in_list_view": 1,
+   "label": "Image 3"
+  },
+  {
+   "fieldname": "form",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Form",
+   "options": "Posture Assessment Forms"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-05-17 00:46:06.793996",
+ "modified_by": "Administrator",
+ "module": "Tch",
+ "name": "Posture Assessment Item",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

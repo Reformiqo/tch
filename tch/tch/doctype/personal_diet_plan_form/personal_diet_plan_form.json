@@ -1,13 +1,15 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "format: FRM-{###}",
  "creation": "2024-04-25 01:37:06.716917",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "mobile_number",
+  "customer",
   "unique_id_no",
   "name1",
-  "mobile_number",
   "gender",
   "age",
   "height_ft_inch_or_cm",
@@ -19,9 +21,9 @@
   "goal_waist_inch",
   "current_hip_inch",
   "goal_hip_inch",
-  "flat_loss_zone",
-  "flat_maintain_zone",
-  "flat_gain_zone",
+  "fat_loss_zone",
+  "fat_maintain_zone",
+  "fat_gain_zone",
   "fasting_hours",
   "any_food_allergy",
   "food_intake",
@@ -58,7 +60,7 @@
    "fieldname": "gender",
    "fieldtype": "Select",
    "label": "Gender",
-   "options": "Male\nFemale"
+   "options": "\nMale\nFemale"
   },
   {
    "fieldname": "age",
@@ -109,21 +111,6 @@
    "fieldname": "goal_hip_inch",
    "fieldtype": "Data",
    "label": "Goal Hip Inch"
-  },
-  {
-   "fieldname": "flat_loss_zone",
-   "fieldtype": "Data",
-   "label": "Fat loss Zone - MR"
-  },
-  {
-   "fieldname": "flat_maintain_zone",
-   "fieldtype": "Data",
-   "label": "Fat Maintain Zone - MR"
-  },
-  {
-   "fieldname": "flat_gain_zone",
-   "fieldtype": "Data",
-   "label": "Fat Gain Zone - MR"
   },
   {
    "fieldname": "fasting_hours",
@@ -182,6 +169,7 @@
    "label": "What's your D3 Level ?"
   },
   {
+   "default": "No disease",
    "fieldname": "lifestyle_diseases",
    "fieldtype": "Select",
    "label": "Do you have any lifestyle diseases? Do you have any disease?) ",
@@ -203,14 +191,35 @@
    "fieldtype": "Select",
    "label": "Which person are you ?",
    "options": "A) Vegetarian\nB) Eggiterian\nC) Non-Vegetarian"
+  },
+  {
+   "fieldname": "fat_loss_zone",
+   "fieldtype": "Data",
+   "label": "Fat loss Zone - MR"
+  },
+  {
+   "fieldname": "fat_maintain_zone",
+   "fieldtype": "Data",
+   "label": "Fat Maintain Zone - MR"
+  },
+  {
+   "fieldname": "fat_gain_zone",
+   "fieldtype": "Data",
+   "label": "Fat Gain Zone - MR"
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Select",
+   "label": "Customer"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-04-25 02:00:21.413164",
+ "modified": "2024-06-27 05:10:08.070845",
  "modified_by": "Administrator",
  "module": "Tch",
  "name": "Personal Diet Plan Form",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {

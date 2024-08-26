@@ -1,0 +1,32 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-05-11 10:42:07.265488",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "file"
+ ],
+ "fields": [
+  {
+   "fieldname": "file",
+   "fieldtype": "Attach Image",
+   "in_filter": 1,
+   "in_preview": 1,
+   "label": "File"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-05-11 10:43:47.984766",
+ "modified_by": "Administrator",
+ "module": "Tch",
+ "name": "Posture Assessment images",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

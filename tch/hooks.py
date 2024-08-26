@@ -133,10 +133,10 @@ app_license = "mit"
 # Scheduled Tasks
 # ---------------
 
-# scheduler_events = {
-# 	"all": [
-# 		"tch.tasks.all"
-# 	],
+scheduler_events = {
+	"daily": [
+		"tch.utils.attendance"
+	],
 # 	"daily": [
 # 		"tch.tasks.daily"
 # 	],
@@ -149,7 +149,7 @@ app_license = "mit"
 # 	"monthly": [
 # 		"tch.tasks.monthly"
 # 	],
-# }
+}
 
 # Testing
 # -------

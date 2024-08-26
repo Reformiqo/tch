@@ -1,0 +1,115 @@
+{
+ "actions": [],
+ "autoname": "format: FRM-{###}",
+ "creation": "2024-05-03 22:44:40.523498",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "name1",
+  "unique_id",
+  "mobile_number",
+  "what_is_your_normal_heart_rate",
+  "what_is_your_pulses_in_1_minutes_after_3_minutes_high_knee",
+  "how_many_push_up_have_you_done",
+  "how_many_squats_have_you_done",
+  "how_many_curl_upabs_have_you_done",
+  "what_is_your_status_in_tree_pose",
+  "what_is_your_status_in_hamstring",
+  "what_is_your_status_in_chair_pose",
+  "what_is_your_status_in_shoulder_mobility"
+ ],
+ "fields": [
+  {
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "label": "Name"
+  },
+  {
+   "fieldname": "unique_id",
+   "fieldtype": "Data",
+   "label": "Unique ID "
+  },
+  {
+   "fieldname": "mobile_number",
+   "fieldtype": "Data",
+   "label": "Mobile number"
+  },
+  {
+   "fieldname": "what_is_your_normal_heart_rate",
+   "fieldtype": "Data",
+   "label": "What is your normal heart rate?"
+  },
+  {
+   "fieldname": "what_is_your_pulses_in_1_minutes_after_3_minutes_high_knee",
+   "fieldtype": "Data",
+   "label": "What is your pulses in 1 minutes after 3 minutes high knee?"
+  },
+  {
+   "fieldname": "how_many_push_up_have_you_done",
+   "fieldtype": "Data",
+   "label": "How many push up have you done?"
+  },
+  {
+   "fieldname": "how_many_squats_have_you_done",
+   "fieldtype": "Select",
+   "label": "How many squats have you done?",
+   "options": "Yes\nNo"
+  },
+  {
+   "fieldname": "how_many_curl_upabs_have_you_done",
+   "fieldtype": "Select",
+   "label": "How many curl up(abs) have you done?",
+   "options": "Yes\nNo"
+  },
+  {
+   "fieldname": "what_is_your_status_in_tree_pose",
+   "fieldtype": "Select",
+   "label": "What is your status in Tree pose?",
+   "options": "Pass\nFail"
+  },
+  {
+   "fieldname": "what_is_your_status_in_hamstring",
+   "fieldtype": "Select",
+   "label": "What is your status in Hamstring?",
+   "options": "Pass\nFail"
+  },
+  {
+   "fieldname": "what_is_your_status_in_chair_pose",
+   "fieldtype": "Select",
+   "label": "What is your status in chair pose?",
+   "options": "Pass\nFail"
+  },
+  {
+   "fieldname": "what_is_your_status_in_shoulder_mobility",
+   "fieldtype": "Select",
+   "label": "What is your status in shoulder mobility?",
+   "options": "Pass\nFail"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-05-04 12:12:35.737478",
+ "modified_by": "Administrator",
+ "module": "Tch",
+ "name": "The Complete Health",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "mobile_number",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

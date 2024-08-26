@@ -1,11 +1,14 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "format: FRM-{###}",
  "creation": "2024-04-24 19:04:43.593546",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
   "name1",
+  "customer",
+  "mobile_number",
   "unique_id",
   "in_the_last_week_what_percentage__did_you_follow_your_diet",
   "last_week_for_how_many_days_did_you_follow_your_exercise",
@@ -64,14 +67,25 @@
    "fieldtype": "Select",
    "label": "Have you filled in all the above answers correctly?",
    "options": "Yes\nNo"
+  },
+  {
+   "fieldname": "mobile_number",
+   "fieldtype": "Data",
+   "label": "Mobile Number"
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Select",
+   "label": "Customer"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-04-24 20:36:25.193774",
+ "modified": "2024-06-27 05:04:50.547736",
  "modified_by": "Administrator",
  "module": "Tch",
  "name": "TCH Lifestyle",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {

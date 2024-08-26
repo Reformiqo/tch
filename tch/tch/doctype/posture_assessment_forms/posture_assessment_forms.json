@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "format: FRM-{###}",
  "creation": "2024-04-25 01:24:08.559457",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -9,7 +10,9 @@
   "unique_id",
   "mobile_number",
   "name1",
-  "share_your_photos"
+  "image_1",
+  "image_2",
+  "image_3"
  ],
  "fields": [
   {
@@ -33,17 +36,28 @@
    "label": "Name"
   },
   {
-   "fieldname": "share_your_photos",
+   "fieldname": "image_1",
    "fieldtype": "Attach",
-   "label": "Share Your Photos"
+   "label": "Image 1"
+  },
+  {
+   "fieldname": "image_2",
+   "fieldtype": "Attach",
+   "label": "Image 2"
+  },
+  {
+   "fieldname": "image_3",
+   "fieldtype": "Attach",
+   "label": "Image 3"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-04-25 01:28:40.140246",
+ "modified": "2024-05-11 11:51:10.623003",
  "modified_by": "Administrator",
  "module": "Tch",
  "name": "Posture Assessment Forms",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {

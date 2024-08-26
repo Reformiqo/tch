@@ -18,7 +18,7 @@
  "list_columns": [],
  "login_required": 0,
  "max_attachment_size": 0,
- "modified": "2024-04-27 04:35:31.000917",
+ "modified": "2024-06-27 05:23:55.827678",
  "modified_by": "Administrator",
  "module": "Tch",
  "name": "the-complete-health-prq-form",
@@ -32,23 +32,23 @@
  "web_form_fields": [
   {
    "allow_read_on_all_link_options": 0,
-   "fieldname": "name1",
+   "fieldname": "mobile_number",
    "fieldtype": "Data",
    "hidden": 0,
-   "label": "Name",
+   "label": "Mobile number",
    "max_length": 0,
    "max_value": 0,
    "precision": "",
    "read_only": 0,
-   "reqd": 0,
+   "reqd": 1,
    "show_in_filter": 0
   },
   {
    "allow_read_on_all_link_options": 0,
-   "fieldname": "unique_id",
-   "fieldtype": "Data",
+   "fieldname": "customer",
+   "fieldtype": "Select",
    "hidden": 0,
-   "label": "Unique ID ",
+   "label": "Full Name",
    "max_length": 0,
    "max_value": 0,
    "precision": "",
@@ -71,19 +71,6 @@
   },
   {
    "allow_read_on_all_link_options": 0,
-   "fieldname": "mobile_number",
-   "fieldtype": "Data",
-   "hidden": 0,
-   "label": "Mobile number",
-   "max_length": 0,
-   "max_value": 0,
-   "precision": "",
-   "read_only": 0,
-   "reqd": 0,
-   "show_in_filter": 0
-  },
-  {
-   "allow_read_on_all_link_options": 0,
    "fieldname": "do_you_have_heart_problem",
    "fieldtype": "Data",
    "hidden": 0,
@@ -92,7 +79,7 @@
    "max_value": 0,
    "precision": "",
    "read_only": 0,
-   "reqd": 0,
+   "reqd": 1,
    "show_in_filter": 0
   },
   {
@@ -132,7 +119,7 @@
    "options": "Yes\nNo",
    "precision": "",
    "read_only": 0,
-   "reqd": 0,
+   "reqd": 1,
    "show_in_filter": 0
   },
   {
@@ -185,7 +172,7 @@
    "max_value": 0,
    "precision": "",
    "read_only": 0,
-   "reqd": 0,
+   "reqd": 1,
    "show_in_filter": 0
   },
   {
@@ -198,7 +185,7 @@
    "max_value": 0,
    "precision": "",
    "read_only": 0,
-   "reqd": 0,
+   "reqd": 1,
    "show_in_filter": 0
   },
   {
@@ -211,7 +198,7 @@
    "max_value": 0,
    "precision": "",
    "read_only": 0,
-   "reqd": 0,
+   "reqd": 1,
    "show_in_filter": 0
   },
   {
@@ -219,7 +206,7 @@
    "fieldname": "attach",
    "fieldtype": "Attach",
    "hidden": 0,
-   "label": "If you have any kind of physical problem, Please upload your Report otherwise send on Whats App no 9825344428",
+   "label": "If you have any kind of physical problem, Please upload your Report",
    "max_length": 0,
    "max_value": 0,
    "precision": "",
@@ -237,7 +224,7 @@
    "max_value": 0,
    "precision": "",
    "read_only": 0,
-   "reqd": 0,
+   "reqd": 1,
    "show_in_filter": 0
   }
  ]

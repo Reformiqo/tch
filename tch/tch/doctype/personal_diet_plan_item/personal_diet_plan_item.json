@@ -1,0 +1,248 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format: FRM-{###}",
+ "creation": "2024-05-16 21:06:43.157168",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "form",
+  "mobile_number",
+  "gender",
+  "age",
+  "height_ft_inch_or_cm",
+  "current_weight",
+  "goal_weight",
+  "past_3_years_highest_weight",
+  "past_3_years_lowest_weight",
+  "current_waist_inch",
+  "goal_waist_inch",
+  "current_hip_inch",
+  "goal_hip_inch",
+  "fat_loss_zone",
+  "fat_maintain_zone",
+  "fat_gain_zone",
+  "fasting_hours",
+  "any_food_allergy",
+  "food_intake",
+  "breakfast",
+  "s1",
+  "lunch",
+  "s2",
+  "dinner",
+  "medication_intake",
+  "whats_your_b12_level_",
+  "whats_your_d3_level_",
+  "lifestyle_diseases",
+  "if_other_diseases_please_write_down_below",
+  "what_is_your_goal",
+  "which_person_are_you_"
+ ],
+ "fields": [
+  {
+   "fieldname": "mobile_number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Mobile Number"
+  },
+  {
+   "fieldname": "gender",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Gender",
+   "options": "Male\nFemale"
+  },
+  {
+   "fieldname": "age",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Age"
+  },
+  {
+   "fieldname": "height_ft_inch_or_cm",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Height Ft Inch or CM"
+  },
+  {
+   "fieldname": "current_weight",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Current Weight "
+  },
+  {
+   "fieldname": "goal_weight",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Goal Weight"
+  },
+  {
+   "fieldname": "past_3_years_highest_weight",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Past 3 years Highest Weight"
+  },
+  {
+   "fieldname": "past_3_years_lowest_weight",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Past 3 years Lowest Weight"
+  },
+  {
+   "fieldname": "current_waist_inch",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Current Waist Inch"
+  },
+  {
+   "fieldname": "goal_waist_inch",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Goal Waist Inch"
+  },
+  {
+   "fieldname": "current_hip_inch",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Current Hip Inch"
+  },
+  {
+   "fieldname": "goal_hip_inch",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Goal Hip Inch"
+  },
+  {
+   "fieldname": "fasting_hours",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Fasting Hours"
+  },
+  {
+   "fieldname": "any_food_allergy",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Any Food Allergy"
+  },
+  {
+   "description": "To better understand how you eat and what you \neat, we are collecting information about your daily \nfood consumption.",
+   "fieldname": "food_intake",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Food Intake"
+  },
+  {
+   "fieldname": "breakfast",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Breakfast"
+  },
+  {
+   "fieldname": "s1",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Snack"
+  },
+  {
+   "fieldname": "lunch",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Lunch"
+  },
+  {
+   "fieldname": "s2",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Snack"
+  },
+  {
+   "fieldname": "dinner",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Dinner"
+  },
+  {
+   "fieldname": "medication_intake",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Do you take any Medication/Medicine? If yes which medicine do you take ?"
+  },
+  {
+   "fieldname": "whats_your_b12_level_",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "What's your B12 Level ?"
+  },
+  {
+   "fieldname": "whats_your_d3_level_",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "What's your D3 Level ?"
+  },
+  {
+   "fieldname": "lifestyle_diseases",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Do you have any lifestyle diseases? Do you have any disease?) ",
+   "options": "No disease\nHeart Attack\nThyroid\nUric Acid\nPCOD\nDiabetes\nBlood Pressure"
+  },
+  {
+   "fieldname": "if_other_diseases_please_write_down_below",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "If other diseases please write down below"
+  },
+  {
+   "fieldname": "what_is_your_goal",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "What is your goal? ",
+   "options": "Weight Loss / Fat Loss / Inch Loss\nWeight Gain / Muscle Gain\nWeight Maintenance\nModel Body / Six Pack Abs / Zero Figure\nControl Diabetes\nControl Thyroid\nControl PCOD\nControl any other lifestyle diseases (Uric\nAcid, Alzheimer, Cholesterol, Joint Pain, Leg\nPain, Arthritis, Acidity or Other)\nPrevention / Live Long"
+  },
+  {
+   "fieldname": "which_person_are_you_",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Which person are you ?",
+   "options": "A) Vegetarian\nB) Eggiterian\nC) Non-Vegetarian"
+  },
+  {
+   "fieldname": "form",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Form",
+   "options": "Personal Diet Plan Form"
+  },
+  {
+   "fieldname": "fat_loss_zone",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Fat loss Zone - MR"
+  },
+  {
+   "fieldname": "fat_maintain_zone",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Fat Maintain Zone - MR"
+  },
+  {
+   "fieldname": "fat_gain_zone",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Fat Gain Zone - MR"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-05-17 01:22:13.717434",
+ "modified_by": "Administrator",
+ "module": "Tch",
+ "name": "Personal Diet Plan Item",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
