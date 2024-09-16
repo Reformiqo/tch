@@ -1,0 +1,68 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Lead",
+  "enabled": 1,
+  "modified": "2024-04-26 08:12:19.353502",
+  "module": "Tch",
+  "name": "lead",
+  "script": "frappe.ui.form.on('Lead', {\n\trefresh(frm) {\n\t    if (frm.doc.whatsapp_no) {\n\t\t// add a custom button to the form\n        frm.add_custom_button(__('Send Whatsapp'), () => {\n            // get the whatsapp number and open the whatsapp web\n            var link = 'https://wa.me/' + frm.doc.whatsapp_no;\n            window.open(link, \"_blank\");\n\n           \n        });\n\t    }\n\t}\n})",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Lead",
+  "enabled": 1,
+  "modified": "2024-04-26 08:44:05.598283",
+  "module": "Tch",
+  "name": "Lead list view",
+  "script": "frappe.listview_settings['Customer'] = {\n    \n    button: {\n        show(doc) {\n            return doc.reference_name;\n        },\n        get_label() {\n            return 'View';\n        },\n        get_description(doc) {\n            return __('View {0}', [`${doc.reference_type} ${doc.reference_name}`])\n        },\n        action(doc) {\n            frappe.set_route('Form', doc.reference_type, doc.reference_name);\n        }\n    },\n\n    \n    }\n",
+  "view": "List"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Customer",
+  "enabled": 1,
+  "modified": "2024-05-02 10:23:31.971273",
+  "module": "Tch",
+  "name": "Customer Whatsapp",
+  "script": "frappe.ui.form.on('Customer', {\n    refresh(frm) {\n        if (frm.doc.mobile_no) {\n            // add a custom button to the form\n            frm.add_custom_button(__('Share Form'), () => {\n                // get the whatsapp number and open the whatsapp web\n\n                frappe.prompt([\n                    // forms\n                    // https://tch.erpera.io/posture-assessment/new\n                    // https://tch.erpera.io/tch-lifestyle/new\n                    // https://tch.erpera.io/personal-diet-plan-form/new\n                    // https://tch.erpera.io/the-complete-health-prq-form/new\n            \n                    {\n                        label: 'Form',\n                        fieldname: 'form',\n                        fieldtype: 'Select',\n                        options: [\n                            { 'label': 'Posture Assessment', 'value': 'https://tch.erpera.io/posture-assessment/new' },\n                            { 'label': 'TCH Lifestyle', 'value': 'https://tch.erpera.io/tch-lifestyle/new' },\n                            { 'label': 'Personal Diet Plan Form', 'value': 'https://tch.erpera.io/personal-diet-plan-form/new' },\n                            { 'label': 'The Complete Health PRQ Form', 'value': 'https://tch.erpera.io/the-complete-health-prq-form/new' },\n                        ]\n                    },\n                ], (values) => {\n                    // send predefined message base on the form selected\n                    if (values.form == 'https://tch.erpera.io/posture-assessment/new') {\n                       var message = `Dear Participants, We kindly request that you take the time to fill out the Google form provided. Your input regarding your *physical health* is of great importance to us. Thank you for your cooperation. Team CFL`\n                        var url = `https://wa.me/91${frm.doc.mobile_no}?text=${message}%0A%0A${values.form}`\n                        window.open(url, '_blank');\n                    } else if (values.form == 'https://tch.erpera.io/tch-lifestyle/new') {\n                       var  message = `Kindly share your TCH lifestyle status. (कृपया अपनी TCH lifestyle का status शेर करें।)  Thank you  *Team CFL*`\n                        var url = `https://wa.me/91${frm.doc.mobile_no}?text=${message}%0A%0A${values.form}`\n                        window.open(url, '_blank');\n                    } else if (values.form == 'https://tch.erpera.io/personal-diet-plan-form/new') {\n                       var  message = `*Dear Participants Personal Diet Plan* के लिए यह Google Form Fill करना जरुरी है। हो सके उतना जल्द से जल्द Google Form Submit करे। Thank you Team CFL`\n                        var url = `https://wa.me/91${frm.doc.mobile_no}?text=${message}%0A%0A${values.form}`\n                        window.open(url, '_blank');\n                    } else {\n                        var message = 'Please fill out *TCH 9 Fitness Test Form* कृपया इस फॉर्म को भरें'\n                        var url = `https://wa.me/91${frm.doc.mobile_no}?text=${message}%0A%0A${values.form}`\n                        window.open(url, '_blank');\n                    }\n                });\n            }, __('Whatsapp'));\n        }\n    },\n});\n",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Member Attendance",
+  "enabled": 0,
+  "modified": "2024-04-29 05:30:04.068609",
+  "module": "Tch",
+  "name": "Member Attendance",
+  "script": "function updateUrl(listview) {\n    frappe.prompt([\n\n        {\n\n            label: 'URL',\n            fieldname: 'url',\n            fieldtype: 'Data',\n        },\n\n    ], (values) => {\n        // validate if it is valid url\n        var url = values.url;\n        if (!url) {\n            frappe.throw(\"URL is required\");\n            return;\n        }\n        if (!url.startsWith('http')) {\n            frappe.throw(\"URL must start with http or https\");\n            return;\n        }\n        if (!url.includes('://')) {\n            frappe.throw(\"URL must contain ://\");\n            return;\n        }\n\n\n\n        // \n        // call a backen function\n        frappe.call({\n            method: 'tch.utils.update_url',\n            args: {\n                url: values.url\n            },\n            callback: function (r) {\n                if (r.message) {\n                    frappe.msgprint(r.message);\n                }\n            }\n        });\n        frappe.msgprint(\"URL Updated\");\n\n\n\n    })\n\n}\n\nfrappe.listview_settings['Member Attendance'] = {\n    refresh: function (listview) {\n        listview.page.add_inner_button(\"Update Url\", function () {\n            updateUrl(listview);\n        });;\n    },\n};",
+  "view": "List"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Customer",
+  "enabled": 1,
+  "modified": "2024-05-03 00:33:12.825674",
+  "module": "Tch",
+  "name": "Create acttivity",
+  "script": "frappe.ui.form.on('Customer', {\n    refresh(frm) {\n        // add a custom button on create group\n        frm.add_custom_button(__('New Event'), function(){\n\n        // prompt for multiple values\n        frappe.prompt([\n            {\n                label: 'Reference',\n                fieldname: 'reference',\n                fieldtype: 'Select',\n                options: [\n                    'Event',\n                    'ToDo',\n                ],\n            },\n            // check button name public\n            {\n                label: 'Public',\n                fieldname: 'public',\n                fieldtype: 'Check'\n            },\n            // event type\n             {\n                label: 'Category',\n                fieldname: 'category',\n                fieldtype: 'Select',\n                options: [\n                    'Meeting',\n                    'Call',\n                    'Other'\n                ],\n            },\n            // add a coloumn\n            {\n                label: '',\n                fieldname: 'cb',\n                fieldtype: 'Column Break'\n            },\n        \n            {\n                label: 'Date',\n                fieldname: 'date',\n                fieldtype: 'Date'\n            },\n            // assign to a user\n            {\n                label: 'Assign To',\n                fieldname: 'assign_to',\n                fieldtype: 'Link',\n                options: 'User'\n            },\n            // section break\n            {\n                label: '',\n                fieldname: 'sb',\n                fieldtype: 'Section Break'\n            },\n            // summary\n            {\n                label: 'Summary',\n                fieldname: 'summary',\n                fieldtype: 'Data'\n            },\n\n            // description\n            {\n                label: '',\n                fieldname: 'description',\n                fieldtype: 'Text'\n            },\n            // select attachment\n            {\n                label: 'Add Attachment',\n                fieldname: 'attachment',\n                fieldtype: 'Attach'\n            }\n        ], (values) => {\n            // create a new event\n            frappe.call(\n                'tch.utils.create_event',\n                {\n                    ref: values.reference,\n                    date: values.date,\n                    assign_to: values.assign_to,\n                    summary: values.summary,\n                    description: values.description,\n                    is_public: values.public,\n                    customer: frm.doc.name,\n                    category: values.category\n                },\n                \n                (r) => {\n                    if (r.message) {\n                        frappe.msgprint(__('Event created successfully'));\n                    }\n        }\n    )\n\n}, __('Create Event'));\n    \n\n\n}, __('Create'));\n\n        \n    },\n  \n});",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Customer",
+  "enabled": 1,
+  "modified": "2024-05-02 10:26:43.800223",
+  "module": "Tch",
+  "name": "Send Message Whatsapp Customer",
+  "script": "frappe.ui.form.on('Customer', {\n\trefresh(frm) {\n\t    if (frm.doc.mobile_no) {\n\t\t// add a custom button to the form\n        frm.add_custom_button(__('Send Message'), () => {\n            // get the whatsapp number and open the whatsapp web\n            var link = 'https://wa.me/' + frm.doc.mobile_no;\n            window.open(link, \"_blank\");\n\n           \n        }, __('Whatsapp'));\n\t    }\n\t}\n})",
+  "view": "Form"
+ }
+]
